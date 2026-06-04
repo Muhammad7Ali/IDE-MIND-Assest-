@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | IDE Mind</title>
+    <meta name="description" content="Privacy Policy for IDE Mind, a premium software development agency. Learn how we protect your data.">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #FF4D00;
+            --dark: #040404;
+            --text-dark: #1a1a1a;
+            --text-light: #666666;
+            --bg-light: #f8f8f8;
+            --border: #e0e0e0;
+            --white: #ffffff;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: var(--white);
+        }
+
+        /* Header */
+        header {
+            background: var(--white);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .header-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 18px;
+            color: var(--text-dark);
+            transition: opacity 0.2s;
+        }
+
+        .logo:hover {
+            opacity: 0.8;
+        }
+
+        .logo img {
+            height: 40px;
+            width: auto;
+        }
+
+        .nav {
+            display: none;
+            gap: 32px;
+        }
+
+        .nav a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+
+        .nav a:hover {
+            color: var(--primary);
+        }
+
+        @media (min-width: 768px) {
+            .nav {
+                display: flex;
+            }
+        }
+
+        /* Main Content */
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 24px;
+            background: var(--white);
+        }
+
+        .hero {
+            margin-bottom: 60px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
+        }
+
+        .hero p {
+            font-size: 16px;
+            color: var(--text-light);
+        }
+
+        .meta {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-top: 16px;
+            font-size: 13px;
+            color: var(--text-light);
+            flex-wrap: wrap;
+        }
+
+        .meta span {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .icon {
+            width: 16px;
+            height: 16px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+        }
+
+        /* Table of Contents */
+        .toc {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 24px;
+            margin-bottom: 48px;
+        }
+
+        .toc h3 {
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--primary);
+            margin-bottom: 16px;
+            letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .toc ol {
+            list-style: none;
+            counter-reset: item;
+            margin-left: 0;
+        }
+
+        .toc li {
+            counter-increment: item;
+            margin-bottom: 8px;
+        }
+
+        .toc a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+
+        .toc a:hover {
+            color: var(--primary);
+        }
+
+        .toc a::before {
+            content: counter(item) ". ";
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        /* Sections */
+        section {
+            margin-bottom: 48px;
+            scroll-margin-top: 80px;
+        }
+
+        h2 {
+            font-size: 26px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 3px solid var(--primary);
+            display: inline-block;
+        }
+
+        h3 {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-top: 24px;
+            margin-bottom: 12px;
+        }
+
+        h4 {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-top: 16px;
+            margin-bottom: 8px;
+        }
+
+        p {
+            margin-bottom: 16px;
+            color: var(--text-dark);
+            line-height: 1.7;
+        }
+
+        /* Lists */
+        ul {
+            list-style: none;
+            margin-left: 0;
+            margin-bottom: 16px;
+        }
+
+        ul li {
+            margin-bottom: 12px;
+            padding-left: 24px;
+            position: relative;
+            color: var(--text-dark);
+            line-height: 1.7;
+        }
+
+        ul li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 20px;
+        }
+
+        ol {
+            list-style: decimal;
+            margin-left: 24px;
+            margin-bottom: 16px;
+        }
+
+        ol li {
+            margin-bottom: 12px;
+            color: var(--text-dark);
+            line-height: 1.7;
+        }
+
+        /* Emphasis */
+        strong {
+            color: var(--text-dark);
+            font-weight: 700;
+        }
+
+        em {
+            font-style: italic;
+            color: var(--text-light);
+        }
+
+        .highlight {
+            background: rgba(255, 77, 0, 0.08);
+            padding: 2px 6px;
+            border-radius: 3px;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        /* Info Boxes */
+        .info-box {
+            background: var(--white);
+            border-left: 4px solid var(--primary);
+            padding: 16px 20px;
+            border-radius: 4px;
+            margin: 24px 0;
+            font-size: 14px;
+            line-height: 1.6;
+            border: 1px solid var(--border);
+        }
+
+        .info-box strong {
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 24px 0;
+            font-size: 14px;
+            background: var(--white);
+        }
+
+        thead {
+            background: var(--white);
+            border: 1px solid var(--border);
+        }
+
+        thead th {
+            padding: 12px;
+            text-align: left;
+            font-weight: 700;
+            color: var(--text-dark);
+            border: 1px solid var(--border);
+            background: var(--white);
+        }
+
+        tbody td {
+            padding: 12px;
+            border: 1px solid var(--border);
+            color: var(--text-dark);
+            background: var(--white);
+        }
+
+        tbody tr:hover {
+            background: var(--white);
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: var(--white);
+            color: var(--text-dark);
+            padding: 40px;
+            border-radius: 8px;
+            margin-top: 48px;
+            border: 1px solid var(--border);
+        }
+
+        .contact-section h3 {
+            color: var(--primary);
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 8px;
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .contact-section p {
+            color: var(--text-dark);
+            margin-bottom: 12px;
+        }
+
+        .contact-item {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .contact-item strong {
+            color: var(--primary);
+        }
+
+        .contact-item a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        .contact-item a:hover {
+            opacity: 0.8;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--white);
+            color: var(--text-light);
+            padding: 40px 24px;
+            text-align: center;
+            margin-top: 80px;
+            border-top: 1px solid var(--border);
+        }
+
+        footer p {
+            color: var(--text-light);
+            font-size: 13px;
+            margin-bottom: 8px;
+        }
+
+        footer a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        footer a:hover {
+            opacity: 0.8;
+        }
+
+        /* Print Styles */
+        @media print {
+            header {
+                position: static;
+            }
+
+            .toc {
+                page-break-inside: avoid;
+            }
+
+            section {
+                page-break-inside: avoid;
+            }
+
+            h2 {
+                page-break-after: avoid;
+            }
+
+            body, main, footer {
+                background: var(--white);
+                color: var(--text-dark);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            main {
+                padding: 40px 16px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            h2 {
+                font-size: 22px;
+            }
+
+            h3 {
+                font-size: 16px;
+            }
+
+            .contact-section {
+                padding: 24px;
+            }
+
+            table {
+                font-size: 12px;
+            }
+
+            thead th,
+            tbody td {
+                padding: 8px;
+            }
+
+            .meta {
+                flex-direction: column;
+                gap: 12px;
+            }
+        }
+
+        /* Scroll to Top Button */
+        .scroll-to-top {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            width: 44px;
+            height: 44px;
+            background: var(--primary);
+            color: var(--white);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            transition: all 0.3s ease;
+            z-index: 99;
+        }
+
+        .scroll-to-top:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(255, 77, 0, 0.3);
+        }
+
+        .scroll-to-top.show {
+            display: flex;
+        }
+
+        @media (max-width: 768px) {
+            .scroll-to-top {
+                width: 40px;
+                height: 40px;
+                bottom: 16px;
+                right: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="https://idmind.dev" class="logo">
+                <img src="https://raw.githubusercontent.com/Muhammad7Ali/IDE-MIND-Assest-/main/IDE%20MIND%20LOGO%20black%20font%20(2000%20x%201000%20px).png" alt="IDE Mind Logo">
+            </a>
+            <nav class="nav">
+                <a href="#introduction">Overview</a>
+                <a href="#information">Information</a>
+                <a href="#your-rights">Your Rights</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="hero">
+            <h1>Privacy Policy</h1>
+            <p>How IDE Mind protects your data</p>
+            <div class="meta">
+                <span>
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                    <span>Effective: May 28, 2026</span>
+                </span>
+                <span>
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    <span>Global Coverage</span>
+                </span>
+            </div>
+        </div>
+
+        <div class="toc">
+            <h3>
+                <svg class="icon" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.5">
+                    <path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"></path>
+                </svg>
+                Quick Navigation
+            </h3>
+            <ol>
+                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#information">Information We Collect</a></li>
+                <li><a href="#legal-basis">Legal Basis & Purpose</a></li>
+                <li><a href="#data-sharing">Data Sharing & Disclosure</a></li>
+                <li><a href="#security">Data Security & Protection</a></li>
+                <li><a href="#retention">Data Retention</a></li>
+                <li><a href="#your-rights">Your Rights & Choices</a></li>
+                <li><a href="#international">International Data Transfers</a></li>
+                <li><a href="#third-party">Third-Party Websites & Services</a></li>
+                <li><a href="#children">Children's Privacy</a></li>
+                <li><a href="#updates">Changes to This Policy</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ol>
+        </div>
+
+        <section id="introduction">
+            <h2>Introduction</h2>
+            <p>IDE Mind ("Agency," "we," "us," "our") is a premium software development agency headquartered in Pakistan, currently serving clients globally with a focus on expansion into the United States, Australia, Germany, and the United Kingdom. This Privacy Policy outlines how we collect, use, disclose, and safeguard information you provide when using our website (idmind.dev), client portal, email communications, and related services (collectively, "Services").</p>
+            
+            <p>We respect your privacy and are committed to complying with applicable data protection laws across all jurisdictions where we operate, including the General Data Protection Regulation (GDPR), California Consumer Privacy Act (CCPA), and local regulations in Pakistan and other target markets.</p>
+
+            <p>If you do not agree with our policies and practices, please do not use our Services. By accessing or using IDE Mind services, you acknowledge that you have read, understood, and agree to be bound by this Privacy Policy.</p>
+        </section>
+
+        <section id="information">
+            <h2>Information We Collect</h2>
+
+            <h3>Information You Provide</h3>
+            <ul>
+                <li><strong>Contact Information:</strong> Name, email address, phone number, company name, job title, and business address when you complete our contact forms, request quotes, or sign service agreements.</li>
+                <li><strong>Client Account Information:</strong> Login credentials (email, password hash), company details, billing information, and project preferences when you register for our Client Portal.</li>
+                <li><strong>Project & Service Data:</strong> Technical requirements, project specifications, design preferences, assets, code repositories, and any data you upload to our portal or share during development.</li>
+                <li><strong>Payment Information:</strong> Billing address, payment method details (processed securely via third-party payment processors; we do not store full card numbers).</li>
+                <li><strong>Communications:</strong> Email content, support tickets, feedback, testimonials, and any other information you voluntarily submit when communicating with us.</li>
+                <li><strong>Credentials & API Keys:</strong> If applicable, sensitive credentials (database passwords, API keys, environment variables) stored in our secure Doppler integration, encrypted and accessible only to authorized team members.</li>
+            </ul>
+
+            <h3>Information Collected Automatically</h3>
+            <ul>
+                <li><strong>Device & Browser Data:</strong> IP address, browser type, operating system, device identifiers, referring URL, and pages visited.</li>
+                <li><strong>Usage Information:</strong> Timestamps of your interactions, features used, files accessed, time spent on pages, and clickstream data via server logs and analytics tools.</li>
+                <li><strong>Cookies & Tracking:</strong> Session cookies (essential for authentication), analytics cookies (Google Analytics, Plausible, or similar), and local storage tokens to remember preferences.</li>
+                <li><strong>Error Logs:</strong> System errors, crash reports, and debugging data collected to improve service reliability (archived permanently, never deleted, for audit purposes).</li>
+            </ul>
+        </section>
+
+        <section id="legal-basis">
+            <h2>Legal Basis for Processing & Purpose</h2>
+
+            <h3>Processing Grounds</h3>
+            <p>We process your personal data based on the following legal grounds:</p>
+            <ul>
+                <li><strong>Contract:</strong> Processing necessary to perform our services, issue invoices, and fulfill client agreements.</li>
+                <li><strong>Legitimate Interest:</strong> Managing our business operations, preventing fraud, security monitoring, and improving our services.</li>
+                <li><strong>Legal Obligation:</strong> Complying with tax, accounting, and regulatory requirements across our operating jurisdictions.</li>
+                <li><strong>Consent:</strong> For marketing communications, optional features, or non-essential cookies (with ability to withdraw consent at any time).</li>
+            </ul>
+
+            <h3>How We Use Your Information</h3>
+            <ul>
+                <li><strong>Service Delivery:</strong> Executing projects, developing software, deploying applications, providing support, and issuing invoices.</li>
+                <li><strong>Communication:</strong> Sending service updates, project milestones, invoices, password resets, security alerts, and responding to inquiries.</li>
+                <li><strong>Quality Assurance:</strong> Testing, debugging, performance monitoring, error logging (with permanent archival), and service improvements.</li>
+                <li><strong>Security & Compliance:</strong> Detecting fraud, enforcing terms of service, protecting intellectual property, and meeting legal/regulatory obligations.</li>
+                <li><strong>Marketing (Optional):</strong> Sending newsletters, case studies, service announcements, and promotional content only to users who have opted in.</li>
+                <li><strong>Analytics:</strong> Understanding user behavior, trends, and patterns to optimize our website and services (aggregated, non-identifying data).</li>
+            </ul>
+        </section>
+
+        <section id="data-sharing">
+            <h2>Data Sharing & Disclosure</h2>
+
+            <h3>Who We Share Your Data With</h3>
+            <ul>
+                <li><strong>Service Providers:</strong> Payment processors (Stripe, PayPal), email delivery (Resend, Zoho Mail), hosting providers (Vercel, Supabase), analytics platforms (Google Analytics), project management (ClickUp), form handlers (Zite), and automation platforms (Make.com)—all under data processing agreements.</li>
+                <li><strong>Team Members:</strong> Only authorized IDE Mind employees with a need-to-know basis for project delivery or support.</li>
+                <li><strong>Business Partners:</strong> Subcontractors or consultants engaged for specific projects (under strict confidentiality agreements and data processing terms).</li>
+                <li><strong>Legal Requirements:</strong> Law enforcement, courts, or government authorities when required by law, with proper legal process (except in emergencies threatening safety).</li>
+            </ul>
+
+            <h3>What We Do NOT Do</h3>
+            <ul>
+                <li>We do not sell, trade, or rent your personal information to third parties for marketing purposes.</li>
+                <li>We do not share data with unaffiliated third parties except as necessary for service delivery under data processing agreements.</li>
+                <li>We do not use client project data for any purpose other than delivering the contracted services.</li>
+            </ul>
+        </section>
+
+        <section id="security">
+            <h2>Data Security & Protection</h2>
+            <p>We implement industry-standard security measures to protect your personal information:</p>
+            <ul>
+                <li><strong>Encryption:</strong> SSL/TLS encryption for data in transit; AES-256 encryption for sensitive data at rest.</li>
+                <li><strong>Authentication:</strong> Password hashing (bcrypt or similar), multi-factor authentication (MFA) available for portal accounts.</li>
+                <li><strong>Access Control:</strong> Role-based permissions (Admin, Employee, Client); environment-specific secrets managed via Doppler with no hardcoded credentials.</li>
+                <li><strong>Monitoring:</strong> Continuous monitoring for suspicious activity, intrusion detection, and security logging.</li>
+                <li><strong>Error Logs:</strong> Archived permanently (never deleted) for audit trails and incident investigation.</li>
+                <li><strong>Employee Training:</strong> Restricted access, confidentiality agreements, and regular security awareness training for all team members.</li>
+            </ul>
+            
+            <div class="info-box">
+                <strong>
+                    <svg class="icon" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"></path>
+                    </svg>
+                    Security Notice:
+                </strong>
+                While we employ reasonable security measures, no system is completely secure. We cannot guarantee absolute security and encourage you to use strong passwords and protect your login credentials.
+            </div>
+        </section>
+
+        <section id="retention">
+            <h2>Data Retention</h2>
+            <p>We retain personal information for as long as necessary to fulfill the purposes outlined in this policy:</p>
+            <ul>
+                <li><strong>Contact & Account Data:</strong> Retained for the duration of our business relationship plus 3–7 years for legal, tax, and contractual compliance.</li>
+                <li><strong>Project Data:</strong> Retained for the project delivery period plus 2 years (or as required by law), then securely deleted unless archival is required.</li>
+                <li><strong>Error Logs:</strong> Archived permanently for audit, compliance, and security investigations (never deleted).</li>
+                <li><strong>Marketing Data:</strong> Retained until you unsubscribe; suppression lists maintained to prevent re-enrollment.</li>
+                <li><strong>Cookies:</strong> Session cookies expire when you close your browser; persistent analytics cookies expire after 13 months (user-configurable).</li>
+            </ul>
+        </section>
+
+        <section id="your-rights">
+            <h2>Your Rights & Choices</h2>
+
+            <h3>GDPR Rights (For Individuals in the EU)</h3>
+            <p>If you are in the European Union, you have the following rights:</p>
+            <ul>
+                <li><strong>Right to Access:</strong> Request a copy of your personal data we hold.</li>
+                <li><strong>Right to Correction:</strong> Request correction of inaccurate or incomplete data.</li>
+                <li><strong>Right to Erasure:</strong> Request deletion of your data (subject to legal retention obligations).</li>
+                <li><strong>Right to Restrict Processing:</strong> Request temporary halt of data use while you dispute accuracy or lawfulness.</li>
+                <li><strong>Right to Portability:</strong> Request your data in a structured, machine-readable format.</li>
+                <li><strong>Right to Object:</strong> Opt out of marketing communications and certain processing activities.</li>
+                <li><strong>Right to Withdraw Consent:</strong> Withdraw consent for optional processing at any time (does not affect prior processing).</li>
+            </ul>
+
+            <h3>CCPA Rights (For Residents of California)</h3>
+            <p>If you are a California resident, you have the following rights:</p>
+            <ul>
+                <li><strong>Right to Know:</strong> Request what personal information we collect, use, and share.</li>
+                <li><strong>Right to Delete:</strong> Request deletion of your personal information (with limited exceptions).</li>
+                <li><strong>Right to Opt-Out:</strong> Opt out of sale or sharing of your personal information (we do not sell data, but this right exists).</li>
+                <li><strong>Right to Non-Discrimination:</strong> We do not discriminate based on your exercise of these rights.</li>
+            </ul>
+
+            <h3>General Opt-Out & Preference Controls</h3>
+            <ul>
+                <li><strong>Email Communications:</strong> Click "Unsubscribe" in any marketing email or manage preferences in your portal account.</li>
+                <li><strong>Cookies:</strong> Disable non-essential cookies via your browser settings or our cookie consent banner.</li>
+                <li><strong>Analytics:</strong> Opt out of Google Analytics tracking using the browser extension or privacy settings.</li>
+            </ul>
+
+            <div class="info-box">
+                <strong>
+                    <svg class="icon" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.5">
+                        <path d="M11 5a6 6 0 016 6v7h-2v-7a4 4 0 00-4-4v-2zm3 7a3 3 0 00-3-3H7v3a3 3 0 003 3h4zm7 0a3 3 0 00-3-3h-4v3a3 3 0 003 3h4zm-8 7h-2v-2a2 2 0 00-2 2v2H6v-2a4 4 0 014-4h2a4 4 0 014 4v2h-2v-2a2 2 0 00-2-2z"></path>
+                    </svg>
+                    Rights Requests:
+                </strong>
+                To submit any rights request, email us at <strong>privacy@idmind.dev</strong> with your name, request type, and supporting details. We will respond within 30 days (or your jurisdiction's legal timeframe).
+            </div>
+        </section>
+
+        <section id="international">
+            <h2>International Data Transfers</h2>
+            <p>IDE Mind is based in Pakistan and processes data across multiple jurisdictions (USA, Australia, Germany, UK). If you are in the EU and your data is transferred outside the EEA:</p>
+            <ul>
+                <li>Standard Contractual Clauses (SCCs) or other adequacy mechanisms approved by your local data protection authority will be used.</li>
+                <li>Service providers (Vercel, Supabase, Google, etc.) may store data in multiple regions; you agree to these transfers as part of using our Services.</li>
+                <li>We implement technical and organizational safeguards equivalent to your home jurisdiction's standards.</li>
+            </ul>
+        </section>
+
+        <section id="third-party">
+            <h2>Third-Party Websites & Services</h2>
+            <p>Our website and communications may contain links to third-party websites and services (e.g., GitHub, ClickUp, Figma, or other tools used in your project). This Privacy Policy does not apply to third-party sites. We are not responsible for their privacy practices. We encourage you to review their privacy policies before sharing information.</p>
+
+            <p>If you access our Services through a third-party platform (OAuth, social login, etc.), you agree to that platform's terms and we may receive profile information per their permissions.</p>
+        </section>
+
+        <section id="children">
+            <h2>Children's Privacy</h2>
+            <p>Our Services are not directed to individuals under 18 years old. We do not knowingly collect personal information from children under 18. If we discover that we have collected data from a child, we will delete it immediately. If you believe a child's data has been collected, contact us at <strong>privacy@idmind.dev</strong>.</p>
+        </section>
+
+        <section id="updates">
+            <h2>Changes to This Privacy Policy</h2>
+            <p>We may update this Privacy Policy periodically to reflect changes in our practices, technology, legal requirements, or other factors. The "Effective Date" above will indicate the last revision.</p>
+
+            <p>Material changes will be communicated via email or a prominent notice on our website. Continued use of our Services after changes indicates your acceptance of the updated policy.</p>
+        </section>
+
+        <section id="contact">
+            <div class="contact-section">
+                <h3>
+                    <svg class="icon" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.5">
+                        <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                    </svg>
+                    Contact Us
+                </h3>
+                <p>If you have questions about this Privacy Policy, wish to exercise your rights, or have concerns about data handling, please contact:</p>
+
+                <div class="contact-item">
+                    <strong>IDE Mind</strong>
+                </div>
+                <div class="contact-item">
+                    <svg class="icon" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.5">
+                        <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                    </svg>
+                    <a href="mailto:privacy@idmind.dev">privacy@idmind.dev</a>
+                </div>
+                <div class="contact-item">
+                    <svg class="icon" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.5">
+                        <path d="M10 19.5a9.5 9.5 0 100-19 9.5 9.5 0 000 19z"></path>
+                    </svg>
+                    <a href="https://idmind.dev" target="_blank">idmind.dev</a>
+                </div>
+                <div class="contact-item">
+                    <svg class="icon" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.5">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    Islamabad, Pakistan
+                </div>
+
+                <p style="margin-top: 24px; border-top: 1px solid var(--border); padding-top: 16px;">
+                    <strong>Response Time:</strong> 30 days for access requests. If you are in the EU and unsatisfied with our response, you have the right to lodge a complaint with your local Data Protection Authority.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 IDE Mind. All Rights Reserved.</p>
+        <p>This privacy policy is effective as of May 28, 2026 and supersedes all previous versions.</p>
+    </footer>
+
+    <button class="scroll-to-top" aria-label="Back to top">↑</button>
+
+    <script>
+        // Scroll to top button
+        const scrollBtn = document.querySelector('.scroll-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollBtn.classList.add('show');
+            } else {
+                scrollBtn.classList.remove('show');
+            }
+        });
+
+        scrollBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
